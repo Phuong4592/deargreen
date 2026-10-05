@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>EnPath Setup</title>
+<title>Diep Setup</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="../support.js"></script>
 </head>
@@ -280,7 +280,7 @@
                     </div>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:12px">
-                    <span style="font-size:12px;font-weight:500;color:var(--color-text-secondary)">Career assignment in EnPath</span>
+                    <span style="font-size:12px;font-weight:500;color:var(--color-text-secondary)">Career assignment in Diep</span>
                     <div style="display:flex;flex-direction:column;gap:8px">
                       <label for="map-pos" style="font-size:14px;font-weight:500;line-height:1">Position</label>
                       <x-import component-from-global-scope="AgenticDesignSystem_b6d96e.Select" id="map-pos" options="{{ mapPosOptions }}" value="{{ mapPos }}" onValueChange="{{ onMapPos }}" placeholder="Select a position" disabled="{{ ro }}" hint-size="100%,36px"></x-import>
@@ -1178,7 +1178,7 @@ class Component extends DCLogic {
       onMapPos: v => this.setState({ mapDraft: { pos: v, lvl: '' } }),
       mapLvlOptions: mapLvlOpts, mapLvl: md.lvl, onMapLvl: v => this.setState({ mapDraft: { ...md, lvl: v } }),
       mapLvlDisabled: ro || !md.pos || !mapLvlOpts.length, mapLvlPh: !md.pos ? 'Select a position first' : mapLvlOpts.length ? 'Select a level' : 'This position has no active levels',
-      mapHint: !md.pos ? 'Only Active Positions are listed.' : !md.lvl ? 'Choose a Level in the selected Position.' : mapChanged ? 'Only the EnPath career assignment changes. HR data stays the same.' : 'No changes to preview.',
+      mapHint: !md.pos ? 'Only Active Positions are listed.' : !md.lvl ? 'Choose a Level in the selected Position.' : mapChanged ? 'Only the Diep career assignment changes. HR data stays the same.' : 'No changes to preview.',
       mapPvDisabled: ro || !mapChanged, mapResetDisabled: !se || (md.lvl === (se.levelId || '') && md.pos === ((lvlOf(d, se.levelId) || {}).posId || '')),
       resetMap: () => se && this.selectEmp(se.id), previewMap: this.previewMap,
 
